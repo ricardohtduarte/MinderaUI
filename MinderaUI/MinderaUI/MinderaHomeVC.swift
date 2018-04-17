@@ -13,6 +13,9 @@ class MinderaHomeVC: UIViewController, UICollectionViewDataSource, UICollectionV
     @IBOutlet weak var open_day_collection: UICollectionView!
     @IBOutlet weak var graduate_collection: UICollectionView!
     
+    @IBOutlet weak var segmented: UISegmentedControl!
+    
+    
     var days:[String] = []
     let graduate_count = 10
     
@@ -54,6 +57,7 @@ class MinderaHomeVC: UIViewController, UICollectionViewDataSource, UICollectionV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.bringSubview(toFront: segmented)
         //populate open day collection view
         for i in 0..<10{
             let temp_day = "Day 0" + String(i)
