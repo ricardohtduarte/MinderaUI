@@ -273,11 +273,87 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="AKB-uW-w7L" id="Tda-cg-qFT"/>
+                        <segue destination="48z-Vn-7pA" kind="show" identifier="list_to_collection" id="DBu-WK-Wsb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTK-ce-eHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1197.5999999999999" y="-162.3688155922039"/>
+        </scene>
+        <!--List CollectionVC-->
+        <scene sceneID="U7U-5I-Yxs">
+            <objects>
+                <viewController id="48z-Vn-7pA" customClass="ListCollectionVC" customModule="MinderaUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JSe-wo-lkh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0pF-Hj-omK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PK3-gi-3VD">
+                                    <size key="itemSize" width="173" height="170"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="item_id" id="b1c-KA-odL" customClass="ListCollectionCell" customModule="MinderaUI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="173" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcR-SQ-tFB">
+                                                    <rect key="frame" x="20" y="20" width="133" height="118"/>
+                                                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOX-LH-D4d">
+                                                    <rect key="frame" x="20" y="141" width="133" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="NOX-LH-D4d" secondAttribute="bottom" constant="8" id="5Uq-xi-Zb8"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="RcR-SQ-tFB" secondAttribute="trailing" constant="12" id="GUf-Zm-hjR"/>
+                                            <constraint firstItem="NOX-LH-D4d" firstAttribute="top" secondItem="RcR-SQ-tFB" secondAttribute="bottom" constant="3" id="Tm4-Dr-hVR"/>
+                                            <constraint firstItem="NOX-LH-D4d" firstAttribute="leading" secondItem="b1c-KA-odL" secondAttribute="leadingMargin" constant="12" id="bg1-3e-qiH"/>
+                                            <constraint firstItem="RcR-SQ-tFB" firstAttribute="top" secondItem="b1c-KA-odL" secondAttribute="top" constant="20" id="cKv-qB-yhc"/>
+                                            <constraint firstItem="RcR-SQ-tFB" firstAttribute="leading" secondItem="b1c-KA-odL" secondAttribute="leadingMargin" constant="12" id="h3f-gj-Pf4"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="NOX-LH-D4d" secondAttribute="trailing" constant="12" id="sVs-fz-Al8"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="label_description" destination="NOX-LH-D4d" id="A1Z-Mx-p4U"/>
+                                            <outlet property="view_container" destination="RcR-SQ-tFB" id="lD5-fG-9Wa"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="48z-Vn-7pA" id="ddW-Bp-I8v"/>
+                                    <outlet property="delegate" destination="48z-Vn-7pA" id="woJ-vG-oIv"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0pF-Hj-omK" firstAttribute="bottom" secondItem="A7m-pI-0gt" secondAttribute="bottom" id="9Ll-Sy-SuG"/>
+                            <constraint firstItem="0pF-Hj-omK" firstAttribute="leading" secondItem="A7m-pI-0gt" secondAttribute="leading" id="FLL-vv-5LZ"/>
+                            <constraint firstItem="0pF-Hj-omK" firstAttribute="trailing" secondItem="A7m-pI-0gt" secondAttribute="trailing" id="HDh-B1-FxB"/>
+                            <constraint firstItem="0pF-Hj-omK" firstAttribute="top" secondItem="A7m-pI-0gt" secondAttribute="top" id="JUQ-MU-wpC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A7m-pI-0gt"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="0pF-Hj-omK" id="Mmh-CE-CDv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4l-SY-eFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920.8" y="-162.3688155922039"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Pq-df-QUt">

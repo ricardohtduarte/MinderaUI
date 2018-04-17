@@ -25,6 +25,14 @@ class OpenDayListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "list_to_collection", sender: indexPath.item)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let collectionVC = segue.destination as! ListCollectionVC
+        collectionVC.list_item = sender as?  Int
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
