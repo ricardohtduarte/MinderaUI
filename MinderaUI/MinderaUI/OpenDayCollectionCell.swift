@@ -1,5 +1,5 @@
 //
-//  OpenDayCollectionViewCell.swift
+//  OpenDayCollectionCell.swift
 //  MinderaUI
 //
 //  Created by Ricardo Duarte on 16/04/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OpenDayCollectionViewCell: UICollectionViewCell {
+class OpenDayCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var day: UILabel!
     

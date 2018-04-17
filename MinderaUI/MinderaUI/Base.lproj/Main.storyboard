@@ -14,7 +14,7 @@
         <!--Meet Mindera-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MinderaUI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MinderaHomeVC" customModule="MinderaUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="936"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="open_day" id="nLI-jf-fVn" customClass="OpenDayCollectionViewCell" customModule="MinderaUI" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="open_day" id="nLI-jf-fVn" customClass="OpenDayCollectionCell" customModule="MinderaUI" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="1" width="120" height="180"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -211,11 +211,73 @@
                     <connections>
                         <outlet property="graduate_collection" destination="Gi1-Im-6oD" id="cwt-Q7-NxA"/>
                         <outlet property="open_day_collection" destination="xm4-nD-K7S" id="MjS-k6-3ZD"/>
+                        <segue destination="gAZ-SA-SlC" kind="show" identifier="home_to_list" id="01H-pw-RXP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="400.80000000000001" y="-135.832083958021"/>
+        </scene>
+        <!--Open Day ListVC-->
+        <scene sceneID="V8c-kv-a8h">
+            <objects>
+                <viewController id="gAZ-SA-SlC" customClass="OpenDayListVC" customModule="MinderaUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ok-uj-hMK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AKB-uW-w7L">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="list_item" rowHeight="66" id="qgQ-yD-MeF" customClass="OpenDayListCell" customModule="MinderaUI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qgQ-yD-MeF" id="ZXc-MR-Unm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4Y-u8-w5J">
+                                                    <rect key="frame" x="15" y="22" width="100" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="W4Y-u8-w5J" firstAttribute="top" secondItem="ZXc-MR-Unm" secondAttribute="topMargin" constant="11" id="1Ns-Ki-Ezs"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="W4Y-u8-w5J" secondAttribute="bottom" constant="12" id="JjD-T5-vuC"/>
+                                                <constraint firstItem="W4Y-u8-w5J" firstAttribute="leading" secondItem="ZXc-MR-Unm" secondAttribute="leadingMargin" id="SPO-Ye-1uy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="W4Y-u8-w5J" secondAttribute="trailing" constant="245" id="c8Y-uI-b14"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="list_nr" destination="W4Y-u8-w5J" id="1JB-cL-tb1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gAZ-SA-SlC" id="GCM-Ri-PH3"/>
+                                    <outlet property="delegate" destination="gAZ-SA-SlC" id="V0r-od-q2b"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AKB-uW-w7L" firstAttribute="bottom" secondItem="Rjp-eb-Kll" secondAttribute="bottom" id="8co-dL-vSi"/>
+                            <constraint firstItem="AKB-uW-w7L" firstAttribute="trailing" secondItem="Rjp-eb-Kll" secondAttribute="trailing" id="iFm-rn-WWI"/>
+                            <constraint firstItem="AKB-uW-w7L" firstAttribute="top" secondItem="Rjp-eb-Kll" secondAttribute="top" id="ujR-S5-KZy"/>
+                            <constraint firstItem="AKB-uW-w7L" firstAttribute="leading" secondItem="Rjp-eb-Kll" secondAttribute="leading" id="w1y-Cu-rEr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rjp-eb-Kll"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="AKB-uW-w7L" id="Tda-cg-qFT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTK-ce-eHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197.5999999999999" y="-162.3688155922039"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Pq-df-QUt">

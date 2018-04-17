@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		A117F64F20854900008767E0 /* GraduateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A117F64E20854900008767E0 /* GraduateCollectionViewCell.swift */; };
 		A11A531C2084F2AB0005111A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A531B2084F2AB0005111A /* AppDelegate.swift */; };
-		A11A531E2084F2AB0005111A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A531D2084F2AB0005111A /* ViewController.swift */; };
+		A11A531E2084F2AB0005111A /* MinderaHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A531D2084F2AB0005111A /* MinderaHomeVC.swift */; };
 		A11A53212084F2AB0005111A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11A531F2084F2AB0005111A /* Main.storyboard */; };
 		A11A53232084F2AC0005111A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11A53222084F2AC0005111A /* Assets.xcassets */; };
 		A11A53262084F2AC0005111A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11A53242084F2AC0005111A /* LaunchScreen.storyboard */; };
 		A11A53312084F2AC0005111A /* MinderaUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A53302084F2AC0005111A /* MinderaUIUITests.swift */; };
-		A11A533C2084FBA10005111A /* OpenDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A533B2084FBA10005111A /* OpenDayCollectionViewCell.swift */; };
+		A11A533C2084FBA10005111A /* OpenDayCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A533B2084FBA10005111A /* OpenDayCollectionCell.swift */; };
+		A1434BE5208636BE00C0844C /* OpenDayListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1434BE4208636BE00C0844C /* OpenDayListVC.swift */; };
+		A1434BE7208637E700C0844C /* OpenDayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1434BE6208637E700C0844C /* OpenDayListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,7 @@
 		A117F64E20854900008767E0 /* GraduateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraduateCollectionViewCell.swift; sourceTree = "<group>"; };
 		A11A53182084F2AB0005111A /* MinderaUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinderaUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11A531B2084F2AB0005111A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A11A531D2084F2AB0005111A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A11A531D2084F2AB0005111A /* MinderaHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinderaHomeVC.swift; sourceTree = "<group>"; };
 		A11A53202084F2AB0005111A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A11A53222084F2AC0005111A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A11A53252084F2AC0005111A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,7 +41,9 @@
 		A11A532C2084F2AC0005111A /* MinderaUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinderaUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11A53302084F2AC0005111A /* MinderaUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinderaUIUITests.swift; sourceTree = "<group>"; };
 		A11A53322084F2AC0005111A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A11A533B2084FBA10005111A /* OpenDayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDayCollectionViewCell.swift; sourceTree = "<group>"; };
+		A11A533B2084FBA10005111A /* OpenDayCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDayCollectionCell.swift; sourceTree = "<group>"; };
+		A1434BE4208636BE00C0844C /* OpenDayListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDayListVC.swift; sourceTree = "<group>"; };
+		A1434BE6208637E700C0844C /* OpenDayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDayListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				A11A531B2084F2AB0005111A /* AppDelegate.swift */,
-				A11A531D2084F2AB0005111A /* ViewController.swift */,
-				A11A533B2084FBA10005111A /* OpenDayCollectionViewCell.swift */,
+				A11A531D2084F2AB0005111A /* MinderaHomeVC.swift */,
+				A1434BE4208636BE00C0844C /* OpenDayListVC.swift */,
+				A11A533B2084FBA10005111A /* OpenDayCollectionCell.swift */,
 				A117F64E20854900008767E0 /* GraduateCollectionViewCell.swift */,
+				A1434BE6208637E700C0844C /* OpenDayListCell.swift */,
 				A11A531F2084F2AB0005111A /* Main.storyboard */,
 				A11A53222084F2AC0005111A /* Assets.xcassets */,
 				A11A53242084F2AC0005111A /* LaunchScreen.storyboard */,
@@ -203,9 +209,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A11A531E2084F2AB0005111A /* ViewController.swift in Sources */,
-				A11A533C2084FBA10005111A /* OpenDayCollectionViewCell.swift in Sources */,
+				A1434BE7208637E700C0844C /* OpenDayListCell.swift in Sources */,
+				A11A531E2084F2AB0005111A /* MinderaHomeVC.swift in Sources */,
+				A11A533C2084FBA10005111A /* OpenDayCollectionCell.swift in Sources */,
 				A117F64F20854900008767E0 /* GraduateCollectionViewCell.swift in Sources */,
+				A1434BE5208636BE00C0844C /* OpenDayListVC.swift in Sources */,
 				A11A531C2084F2AB0005111A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

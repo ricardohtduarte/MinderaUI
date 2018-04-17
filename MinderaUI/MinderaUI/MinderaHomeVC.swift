@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class MinderaHomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
     @IBOutlet weak var open_day_collection: UICollectionView!
     @IBOutlet weak var graduate_collection: UICollectionView!
@@ -27,7 +27,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.open_day_collection{
-            let cell = open_day_collection.dequeueReusableCell(withReuseIdentifier: "open_day", for: indexPath) as! OpenDayCollectionViewCell
+            let cell = open_day_collection.dequeueReusableCell(withReuseIdentifier: "open_day", for: indexPath) as! OpenDayCollectionCell
             cell.layer.backgroundColor = UIColor(red:0.92, green:0.92, blue:0.92, alpha:1.0).cgColor
             cell.day.text = days[indexPath.row]
             return cell
@@ -37,6 +37,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             cell.layer.backgroundColor = UIColor(red:0.92, green:0.92, blue:0.92, alpha:1.0).cgColor
             return cell
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.open_day_collection{
+            performSegue(withIdentifier: "home_to_list", sender: indexPath.row)
+            
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let listVC = segue.destination as! OpenDayListVC
+        listVC.day_nr = sender as! Int
     }
     
 
