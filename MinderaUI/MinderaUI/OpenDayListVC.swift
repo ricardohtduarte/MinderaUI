@@ -10,58 +10,74 @@ import UIKit
 
 class OpenDayListVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    
     @IBOutlet weak var tableView: UITableView!
     var day_nr:Int?
-    var list_items:[Int] = []
+    var list_items:[String] = []
+    let list_count = 15
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        set_navbar_title()
+        populate_list()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list_items.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "list_item", for: indexPath) as! OpenDayListCell
-        cell.list_nr.text = "List " + String(list_items[indexPath.item])
+        cell.list_nr.text = list_items[indexPath.item]
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "list_to_collection", sender: indexPath.item)
+        performSegue(withIdentifier: "list_to_collection", sender: indexPath.item+1)
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let collectionVC = segue.destination as! ListCollectionVC
-        collectionVC.list_item = sender as?  Int
+        collectionVC.list_item = sender as? Int
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    func set_navbar_title(){
         if let number = day_nr{
             self.navigationItem.title = "Open Day 18'_Day " + String(number)
         }
         else{
             print("ERROR: could not get the day number")
         }
-        
-        for i in 0..<15{
-            list_items.append(i)
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func populate_list(){
+        for i in 1..<list_count{
+            var temp:String?
+            if i < 10{
+                temp = "List 0" + String(i)
+            }
+            else if i >= 10{
+                temp = "List " + String(i)
+            }
+            if let item_text = temp{
+                list_items.append(item_text)
+            }
+            else{
+                print("Error: could not get the list number")
+            }
+        }
     }
-    */
-
 }

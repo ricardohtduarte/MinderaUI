@@ -9,8 +9,5 @@
 import UIKit
 
 class OpenDayCollectionCell: UICollectionViewCell {
-
     @IBOutlet weak var day: UILabel!
-    
-    
 }
