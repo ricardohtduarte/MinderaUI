@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="al0-sM-SEe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C6w-w8-8qO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -367,10 +367,41 @@
             </objects>
             <point key="canvasLocation" x="1920.8" y="-162.3688155922039"/>
         </scene>
+        <!--LaunchVC-->
+        <scene sceneID="Jcb-aK-0ur">
+            <objects>
+                <viewController id="C6w-w8-8qO" customClass="LaunchVC" customModule="MinderaUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KyE-5L-QeV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mindera" translatesAutoresizingMaskIntoConstraints="NO" id="SKt-PB-8ej">
+                                <rect key="frame" x="121" y="270" width="132" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="fY4-HV-m9b"/>
+                                    <constraint firstAttribute="height" constant="127" id="ida-6D-Yxr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="SKt-PB-8ej" firstAttribute="centerX" secondItem="KyE-5L-QeV" secondAttribute="centerX" id="Ovc-FI-gMo"/>
+                            <constraint firstItem="SKt-PB-8ej" firstAttribute="centerY" secondItem="KyE-5L-QeV" secondAttribute="centerY" id="Z0C-9r-Fth"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QN5-DW-6oO"/>
+                    </view>
+                    <connections>
+                        <outlet property="logo" destination="SKt-PB-8ej" id="Xbo-yL-7vl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JxO-xD-ZYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1202.4000000000001" y="-134.48275862068968"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Pq-df-QUt">
             <objects>
-                <navigationController id="al0-sM-SEe" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="home" id="al0-sM-SEe" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Awd-iX-KKz">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -384,4 +415,7 @@
             <point key="canvasLocation" x="-369" y="-134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mindera" width="200" height="200"/>
+    </resources>
 </document>

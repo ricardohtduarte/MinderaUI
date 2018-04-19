@@ -11,13 +11,13 @@
 		A11A531E2084F2AB0005111A /* MinderaHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A531D2084F2AB0005111A /* MinderaHomeVC.swift */; };
 		A11A53212084F2AB0005111A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11A531F2084F2AB0005111A /* Main.storyboard */; };
 		A11A53232084F2AC0005111A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11A53222084F2AC0005111A /* Assets.xcassets */; };
-		A11A53262084F2AC0005111A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11A53242084F2AC0005111A /* LaunchScreen.storyboard */; };
 		A11A53312084F2AC0005111A /* MinderaUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A53302084F2AC0005111A /* MinderaUIUITests.swift */; };
 		A11A533C2084FBA10005111A /* OpenDayCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11A533B2084FBA10005111A /* OpenDayCollectionCell.swift */; };
 		A1434BE5208636BE00C0844C /* OpenDayListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1434BE4208636BE00C0844C /* OpenDayListVC.swift */; };
 		A1434BE7208637E700C0844C /* OpenDayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1434BE6208637E700C0844C /* OpenDayListCell.swift */; };
 		A1434BE92086417000C0844C /* ListCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1434BE82086417000C0844C /* ListCollectionVC.swift */; };
 		A1434BEB208641B800C0844C /* ListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1434BEA208641B800C0844C /* ListCollectionCell.swift */; };
+		A1CCDA7A2088CF6900615DDE /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCDA792088CF6900615DDE /* LaunchVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 		A11A531D2084F2AB0005111A /* MinderaHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinderaHomeVC.swift; sourceTree = "<group>"; };
 		A11A53202084F2AB0005111A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A11A53222084F2AC0005111A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A11A53252084F2AC0005111A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A11A53272084F2AC0005111A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A11A532C2084F2AC0005111A /* MinderaUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinderaUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11A53302084F2AC0005111A /* MinderaUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinderaUIUITests.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		A1434BE6208637E700C0844C /* OpenDayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDayListCell.swift; sourceTree = "<group>"; };
 		A1434BE82086417000C0844C /* ListCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionVC.swift; sourceTree = "<group>"; };
 		A1434BEA208641B800C0844C /* ListCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionCell.swift; sourceTree = "<group>"; };
+		A1CCDA792088CF6900615DDE /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				A11A531B2084F2AB0005111A /* AppDelegate.swift */,
+				A1CCDA792088CF6900615DDE /* LaunchVC.swift */,
 				A11A531D2084F2AB0005111A /* MinderaHomeVC.swift */,
 				A1434BE4208636BE00C0844C /* OpenDayListVC.swift */,
 				A1434BE82086417000C0844C /* ListCollectionVC.swift */,
@@ -95,7 +96,6 @@
 				A1434BE6208637E700C0844C /* OpenDayListCell.swift */,
 				A1434BEA208641B800C0844C /* ListCollectionCell.swift */,
 				A11A531F2084F2AB0005111A /* Main.storyboard */,
-				A11A53242084F2AC0005111A /* LaunchScreen.storyboard */,
 				A11A53222084F2AC0005111A /* Assets.xcassets */,
 				A11A53272084F2AC0005111A /* Info.plist */,
 			);
@@ -192,7 +192,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A11A53262084F2AC0005111A /* LaunchScreen.storyboard in Resources */,
 				A11A53232084F2AC0005111A /* Assets.xcassets in Resources */,
 				A11A53212084F2AB0005111A /* Main.storyboard in Resources */,
 			);
@@ -217,6 +216,7 @@
 				A11A533C2084FBA10005111A /* OpenDayCollectionCell.swift in Sources */,
 				A1434BEB208641B800C0844C /* ListCollectionCell.swift in Sources */,
 				A1434BE5208636BE00C0844C /* OpenDayListVC.swift in Sources */,
+				A1CCDA7A2088CF6900615DDE /* LaunchVC.swift in Sources */,
 				A1434BE92086417000C0844C /* ListCollectionVC.swift in Sources */,
 				A11A531C2084F2AB0005111A /* AppDelegate.swift in Sources */,
 			);
@@ -247,14 +247,6 @@
 				A11A53202084F2AB0005111A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A11A53242084F2AC0005111A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A11A53252084F2AC0005111A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
