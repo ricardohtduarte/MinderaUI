@@ -22,7 +22,7 @@ class LaunchVC: UIViewController {
             //180 degrees animation
             self.logo.transform = CGAffineTransform(rotationAngle: CGFloat.pi) },
                        completion: { finished in
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.50) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             //initiate navigation controller
                             let home = self.storyboard?.instantiateViewController(withIdentifier: "home")
                             self.present(home!, animated: true, completion: nil)
