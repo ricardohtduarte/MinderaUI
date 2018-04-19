@@ -56,10 +56,9 @@ class MinderaUIUITests: XCTestCase {
     func test_home_to_openDayList(){
         let app = XCUIApplication()
         app.scrollViews.otherElements.collectionViews.cells.otherElements.containing(.staticText, identifier:"Day 01").element.tap()
-        
         let table = app.tables.element(boundBy: 0)
-        XCTAssert(table.cells.count > 0)
-        
+            
+        XCTAssert(table.cells.count > 0)     
         XCTAssertEqual(app.navigationBars.count, 1)
         XCTAssertEqual(app.tables.count, 1)
         XCTAssert(app.staticTexts["List 01"].exists)
