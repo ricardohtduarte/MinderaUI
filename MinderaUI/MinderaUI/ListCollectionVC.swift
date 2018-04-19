@@ -12,7 +12,7 @@ class ListCollectionVC: UIViewController, UICollectionViewDelegate, UICollection
     
     @IBOutlet weak var collectionView: UICollectionView!
     var items:[String] = []
-    var list_item:Int?
+    var list_item:String?
     let items_length = 15
     
     
@@ -36,7 +36,7 @@ class ListCollectionVC: UIViewController, UICollectionViewDelegate, UICollection
     
     
     func populate_descriptions(){
-        for i in 1..<items_length{
+        for i in 1...items_length{
             var temp:String?
             if i < 10{
                 temp = "Description 0" + String(i)
@@ -55,8 +55,8 @@ class ListCollectionVC: UIViewController, UICollectionViewDelegate, UICollection
     
     
     func set_navbar_title(){
-        if let list_nr = list_item{
-            self.navigationItem.title = "List " + String(list_nr)
+        if let title = list_item{
+            self.navigationItem.title = title
         }
         else{
             print("Error: could not get list number")

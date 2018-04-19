@@ -11,7 +11,7 @@ import UIKit
 class OpenDayListVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
-    var day_nr:Int?
+    var day_nr:String?
     var list_items:[String] = []
     let list_count = 15
     
@@ -43,19 +43,19 @@ class OpenDayListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "list_to_collection", sender: indexPath.item+1)
+        performSegue(withIdentifier: "list_to_collection", sender: "List " + String(indexPath.item+1))
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let collectionVC = segue.destination as! ListCollectionVC
-        collectionVC.list_item = sender as? Int
+        collectionVC.list_item = sender as? String
     }
     
     
     func set_navbar_title(){
-        if let number = day_nr{
-            self.navigationItem.title = "Open Day 18'_Day " + String(number)
+        if let title = day_nr{
+            self.navigationItem.title = title
         }
         else{
             print("ERROR: could not get the day number")
@@ -64,7 +64,7 @@ class OpenDayListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     
     func populate_list(){
-        for i in 1..<list_count{
+        for i in 1...list_count{
             var temp:String?
             if i < 10{
                 temp = "List 0" + String(i)

@@ -19,6 +19,7 @@ class MinderaHomeVC: UIViewController, UICollectionViewDataSource, UICollectionV
     let days_length = 15
     let cell_color = UIColor(red:0.92, green:0.92, blue:0.92, alpha:1.0).cgColor
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.bringSubview(toFront: segmented)
@@ -53,20 +54,19 @@ class MinderaHomeVC: UIViewController, UICollectionViewDataSource, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.open_day_collection{
-            performSegue(withIdentifier: "home_to_list", sender: indexPath.row+1)
-            
+            performSegue(withIdentifier: "home_to_list", sender: "Open Day 18'_Day " + String(indexPath.row+1))
         }
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let listVC = segue.destination as! OpenDayListVC
-        listVC.day_nr = sender as? Int
+        listVC.day_nr = sender as? String
     }
     
     
     func populate_days_collection(){
-        for i in 1..<days_length{
+        for i in 1...days_length{
             var temp_day:String?
             if i < 10{
                 temp_day = "Day 0" + String(i)
