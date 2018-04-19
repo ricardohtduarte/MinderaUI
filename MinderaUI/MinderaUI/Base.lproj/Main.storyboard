@@ -242,7 +242,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4Y-u8-w5J">
-                                                    <rect key="frame" x="15" y="22" width="100" height="21"/>
+                                                    <rect key="frame" x="15" y="22" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -252,7 +252,7 @@
                                                 <constraint firstItem="W4Y-u8-w5J" firstAttribute="top" secondItem="ZXc-MR-Unm" secondAttribute="topMargin" constant="11" id="1Ns-Ki-Ezs"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="W4Y-u8-w5J" secondAttribute="bottom" constant="12" id="JjD-T5-vuC"/>
                                                 <constraint firstItem="W4Y-u8-w5J" firstAttribute="leading" secondItem="ZXc-MR-Unm" secondAttribute="leadingMargin" id="SPO-Ye-1uy"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="W4Y-u8-w5J" secondAttribute="trailing" constant="245" id="c8Y-uI-b14"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="W4Y-u8-w5J" secondAttribute="trailing" id="c8Y-uI-b14"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -282,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTK-ce-eHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197.5999999999999" y="-162.3688155922039"/>
+            <point key="canvasLocation" x="1170" y="-135"/>
         </scene>
         <!--List CollectionVC-->
         <scene sceneID="U7U-5I-Yxs">
@@ -365,12 +365,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4l-SY-eFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920.8" y="-162.3688155922039"/>
+            <point key="canvasLocation" x="1881" y="-136"/>
         </scene>
         <!--LaunchVC-->
         <scene sceneID="Jcb-aK-0ur">
             <objects>
-                <viewController id="C6w-w8-8qO" customClass="LaunchVC" customModule="MinderaUI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="launch" id="C6w-w8-8qO" customClass="LaunchVC" customModule="MinderaUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KyE-5L-QeV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -392,11 +392,12 @@
                     </view>
                     <connections>
                         <outlet property="logo" destination="SKt-PB-8ej" id="Xbo-yL-7vl"/>
+                        <segue destination="al0-sM-SEe" kind="show" identifier="launch_to_home" id="BAK-5g-yPQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxO-xD-ZYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1202.4000000000001" y="-134.48275862068968"/>
+            <point key="canvasLocation" x="-903" y="-135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Pq-df-QUt">

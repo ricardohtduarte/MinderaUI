@@ -17,6 +17,7 @@
 		A1434BE7208637E700C0844C /* OpenDayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1434BE6208637E700C0844C /* OpenDayListCell.swift */; };
 		A1434BE92086417000C0844C /* ListCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1434BE82086417000C0844C /* ListCollectionVC.swift */; };
 		A1434BEB208641B800C0844C /* ListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1434BEA208641B800C0844C /* ListCollectionCell.swift */; };
+		A1C201572088E57200160577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C201562088E57200160577 /* LaunchScreen.storyboard */; };
 		A1CCDA7A2088CF6900615DDE /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCDA792088CF6900615DDE /* LaunchVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		A1434BE6208637E700C0844C /* OpenDayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDayListCell.swift; sourceTree = "<group>"; };
 		A1434BE82086417000C0844C /* ListCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionVC.swift; sourceTree = "<group>"; };
 		A1434BEA208641B800C0844C /* ListCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionCell.swift; sourceTree = "<group>"; };
+		A1C201562088E57200160577 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1CCDA792088CF6900615DDE /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 				A11A533B2084FBA10005111A /* OpenDayCollectionCell.swift */,
 				A1434BE6208637E700C0844C /* OpenDayListCell.swift */,
 				A1434BEA208641B800C0844C /* ListCollectionCell.swift */,
+				A1C201562088E57200160577 /* LaunchScreen.storyboard */,
 				A11A531F2084F2AB0005111A /* Main.storyboard */,
 				A11A53222084F2AC0005111A /* Assets.xcassets */,
 				A11A53272084F2AC0005111A /* Info.plist */,
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1C201572088E57200160577 /* LaunchScreen.storyboard in Resources */,
 				A11A53232084F2AC0005111A /* Assets.xcassets in Resources */,
 				A11A53212084F2AB0005111A /* Main.storyboard in Resources */,
 			);
