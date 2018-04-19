@@ -2,7 +2,7 @@
 
 ![d0ab92b009c4641d47c3c6bdd150279c](https://user-images.githubusercontent.com/15158927/39002524-a8630b48-43f0-11e8-8d1c-8ca54ea96ed5.png)
 
-* Layout created for Mindera Graduate program.
+* Layout created for Mindera Graduate Program.
 * Includes iOS structures such as tableviews, collectionviews and scrollviews
 * Also includes animations and UI tests
 
